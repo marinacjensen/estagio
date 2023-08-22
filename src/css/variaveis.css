@@ -1,0 +1,11 @@
+/* Variáveis de cores */
+
+body {
+  --primaria: white;
+  --secundaria: #0f508d;
+  --terciaria: #5271FF;
+  --extra: #C21C22;
+  --fonte: #606c76;
+  --fonteAux: white;
+  --selectArrow: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%2336b845" d="M0,0l6,8l6-8"/></svg>');
+}
