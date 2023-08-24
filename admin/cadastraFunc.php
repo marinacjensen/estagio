@@ -59,10 +59,11 @@
         <input type="text" class="form-control" name="cpf" id="cpf" 
         placeholder="CPF">
       </label>
-      <label>
-        <input type="text" class="form-control" name="cargo" id="cargo" 
-        placeholder="Cargo">
-      </label>
+      <label>Cargo</label>
+        <select name="cargo" id="cargo">
+          <option value="Técnico">Técnico</option>
+          <option value="Administrador">Administrador</option>
+        </select>
       <button type="submit">Registrar</button>
     </form>
   </div>
