@@ -47,7 +47,7 @@
       $conexao = mysqli_connect("localhost", "root", "", "estagio");
       $query = "INSERT INTO manutencao (tag, funcionario, componente, descricao, frequencia) VALUES ('$tag','$funcionario', '$componente', '$descricao', '$frequencia')";
       mysqli_query($conexao, $query);
-      header("Location: /admin/manutencao.php?manutencaocomp=" . urlencode($componente));
+      header("Location: /Sistema%20Planos%20de%20Manutenção/admin/manutencao.php?manutencaocomp=" . urlencode($componente));
     }
     ?>
     <?php
