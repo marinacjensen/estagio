@@ -47,7 +47,7 @@
 
     $query = "INSERT INTO funcionarios (nome,cpf,cargo) VALUES ('$funcionario','$cpf','$cargo')";
     mysqli_query($conexao, $query); 
-    header("Location: /admin/administrador.php");
+    header("Location: /Sistema%20Planos%20de%20Manutenção/admin/administrador.php");
     }
 ?>
     <form action="cadastraFunc.php" method="POST">
