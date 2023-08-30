@@ -42,6 +42,7 @@
         <button><a href = "cronogramaPlanos.php">Controle de Planos</a></button>
     </div>
     <h3>Máquinas</h3>
+    <button><a href = "cadastraMaquina.php">Cadastrar Máquinas</a></button>
     <table>
       <thead>
         <tr>
