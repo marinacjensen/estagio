@@ -56,9 +56,14 @@
   <tbody>
       <tr>
 <?php
-  $conexao = mysqli_connect("localhost","root","","estagio");
-  $query = "SELECT * FROM equipamentos";
-  $resultado = mysqli_query($conexao, $query);
+$conexao = mysqli_connect("localhost", "root", "", "estagio");
+if (!empty($_POST["deletaMaq"])) {
+  $del = $_POST["deletaMaq"];
+  $querydel = "DELETE FROM equipamentos WHERE tag='$del'";
+  mysqli_query($conexao, $querydel);
+}
+  $queryeq = "SELECT * FROM equipamentos";
+  $resultado = mysqli_query($conexao, $queryeq);
   while($linha = mysqli_fetch_array($resultado)){
     echo "<td>".$linha['tag']."</td>
     <td>".$linha['equipamento']."</td>
@@ -71,6 +76,18 @@
       <button type = "submit" class="btn btn-info btn-xs">Visualizar componentes</button> 
     </td>
     </form>
+    <td>
+    <form method = "post" action="administrador.php">
+    <input type = "hidden" id="inputHidden" name="deletaMaq" value=<?php echo $linha['tag']; ?> >  
+      <button type = "submit" class="btn btn-info btn-xs" >Excluir</button>
+    </td>
+    </form>
+    <td>
+      <form method = "post" action="editaMaq.php">
+    <input type = "hidden" id="inputHidden" name="atualizaMaq" value=<?php echo $linha['tag']; ?> >  
+      <button type = "submit" class="btn btn-info btn-xs" >Editar</button>
+    </td>
+  </form>
   </tr>
   </tbody>
   <?php
